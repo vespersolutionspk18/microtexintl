@@ -1,0 +1,172 @@
+.section {
+  position: relative;
+}
+
+.sectionTitle {
+  color: var(--color-off-white);
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2rem, 7.4666666667vw, 7.4666666667vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0 var(--grid-outer-gutter) 9.6vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .sectionTitle {
+    font-size: clamp(3rem, 2.5vw, 2.5vw);
+    line-height: 1.167;
+    margin: 0 var(--grid-outer-gutter) 4.1666666667vw;
+  }
+}
+
+/* Cards grid */
+.cards {
+  column-gap: var(--grid-gutter);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), 1fr);
+  margin: 0 var(--grid-outer-gutter);
+  row-gap: 24vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .cards {
+    row-gap: 8.3333333333vw;
+  }
+}
+
+/* Individual card */
+.card {
+  grid-column: 1 / -1;
+}
+
+@media only screen and (min-width: 834px) {
+  .card {
+    grid-column: span 12;
+  }
+}
+
+/* Post card */
+.postCard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6.4vw;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 834px) {
+  .postCard {
+    row-gap: 2.2916666667vw;
+  }
+}
+
+/* Image */
+.imageWrapper {
+  aspect-ratio: 676 / 450;
+  border-radius: 4.2666666667vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.imageWrapper img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media only screen and (min-width: 834px) {
+  .imageWrapper {
+    border-radius: 2.2222222222vw;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .postCard:hover .imageWrapper img {
+    transform: scale(1.03);
+  }
+}
+
+/* Content below image */
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6.4vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .content {
+    column-gap: var(--grid-gutter);
+    flex-direction: row;
+    row-gap: 0;
+  }
+}
+
+/* Category label */
+.head {
+  color: var(--color-mid-grey);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 834px) {
+  .head {
+    width: 10.9027777778vw;
+  }
+}
+
+/* Copy wrapper */
+.copyWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.9333333333vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .copyWrapper {
+    row-gap: 0.7638888889vw;
+    width: 31.1111111111vw;
+  }
+}
+
+/* Card title */
+.cardTitle {
+  color: var(--color-off-white);
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.6rem, 5.3333333333vw, 5.3333333333vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardTitle {
+    font-size: clamp(2rem, 1.6666666667vw, 1.6666666667vw);
+    font-weight: 300;
+    line-height: 1.167;
+  }
+}
+
+/* Card copy */
+.copy {
+  color: var(--color-silver);
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+}
+
+@media only screen and (min-width: 834px) {
+  .copy {
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+    font-weight: 300;
+  }
+}

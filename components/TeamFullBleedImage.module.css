@@ -1,0 +1,30 @@
+.section {
+  margin-top: 32vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .section {
+    margin-top: 13.8888888889vw;
+  }
+}
+
+.imageWrapper {
+  aspect-ratio: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.imageWrapper img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media only screen and (min-width: 834px) {
+  .imageWrapper {
+    aspect-ratio: 1440 / 828;
+  }
+}

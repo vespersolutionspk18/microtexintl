@@ -1,0 +1,54 @@
+.teamHero {
+  display: flex;
+  flex-direction: column;
+  padding-top: 97.3333333333vw;
+  row-gap: 5.8666666667vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .teamHero {
+    padding-top: 23.4027777778vw;
+    row-gap: 5.0694444444vw;
+  }
+}
+
+.titleWrapper {
+  margin: 0 var(--grid-outer-gutter);
+}
+
+.title {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2.8rem, 9.6vw, 9.6vw);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.167;
+}
+
+@media only screen and (min-width: 834px) {
+  .title {
+    font-size: clamp(5rem, 4.4444444444vw, 4.4444444444vw);
+    letter-spacing: -0.04em;
+    line-height: 1.125;
+  }
+}
+
+.imageWrapper {
+  aspect-ratio: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.imageWrapper img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media only screen and (min-width: 834px) {
+  .imageWrapper {
+    aspect-ratio: 1440 / 828;
+  }
+}

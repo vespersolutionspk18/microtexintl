@@ -1,0 +1,127 @@
+.hero {
+  background-color: #000;
+  color: #fff;
+  min-height: 100lvh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 16vw;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 834px) {
+  .hero {
+    padding-bottom: 8.3333333333vw;
+  }
+}
+
+.content {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4.2666666667vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .content {
+    grid-column: 1 / 17;
+    row-gap: 1.3888888889vw;
+  }
+}
+
+.label {
+  align-items: center;
+  color: var(--color-silver);
+  display: flex;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+}
+
+.label::before {
+  background-color: currentColor;
+  border-radius: 50%;
+  content: "";
+  height: 0.6rem;
+  margin-right: 0.7rem;
+  width: 0.6rem;
+}
+
+@media only screen and (min-width: 834px) {
+  .label::before {
+    margin-right: 0.4166666667vw;
+  }
+}
+
+.title {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(3.2rem, 9.6vw, 9.6vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+@media only screen and (min-width: 834px) {
+  .title {
+    font-size: clamp(5rem, 4.4444444444vw, 4.4444444444vw);
+    line-height: 1.125;
+  }
+}
+
+.title span {
+  display: block;
+  opacity: 0;
+}
+
+.copy {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.4rem, 4.2666666667vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  color: var(--color-silver);
+  max-width: 90vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .copy {
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+    max-width: 27.7777777778vw;
+  }
+}
+
+.countWrapper {
+  display: none;
+}
+
+@media only screen and (min-width: 834px) {
+  .countWrapper {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    grid-column: 20 / -1;
+    row-gap: 0.3472222222vw;
+  }
+}
+
+.countNumber {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(6rem, 5.5555555556vw, 5.5555555556vw);
+  font-weight: 250;
+  letter-spacing: -0.08em;
+  line-height: 1;
+  color: var(--color-silver);
+}
+
+.countLabel {
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+  color: var(--color-silver);
+}

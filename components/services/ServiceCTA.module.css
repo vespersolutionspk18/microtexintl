@@ -1,0 +1,112 @@
+.section {
+  background-color: var(--color-yellow);
+  color: #fff;
+  padding: 32vw 0;
+  position: relative;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 834px) {
+  .section {
+    padding: 8.3333333333vw 0;
+  }
+}
+
+.content {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 3.2vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .content {
+    grid-column: 5 / 21;
+    row-gap: 1.3888888889vw;
+  }
+}
+
+.label {
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.title {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(3.2rem, 9.6vw, 9.6vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 834px) {
+  .title {
+    font-size: clamp(5rem, 4.4444444444vw, 4.4444444444vw);
+    line-height: 1.125;
+  }
+}
+
+.title span {
+  display: block;
+}
+
+.copy {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.4rem, 4.2666666667vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  opacity: 0.8;
+  max-width: 80%;
+}
+
+@media only screen and (min-width: 834px) {
+  .copy {
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+    max-width: 27.7777777778vw;
+  }
+}
+
+.button {
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 10rem;
+  color: var(--color-yellow);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.4rem, 4.2666666667vw, 1.8rem);
+  font-weight: 400;
+  height: 12.8vw;
+  justify-content: center;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-top: 4.2666666667vw;
+  padding: 0 8.5333333333vw;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@media only screen and (min-width: 834px) {
+  .button {
+    font-size: 1.2rem;
+    height: 2.7777777778vw;
+    margin-top: 1.3888888889vw;
+    padding: 0 2.0833333333vw;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    background-color: var(--color-off-white);
+    color: #fff;
+  }
+}

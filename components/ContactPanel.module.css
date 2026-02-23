@@ -1,0 +1,160 @@
+.panel {
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 100;
+}
+
+.panel.open {
+  pointer-events: all;
+}
+
+/* --- Container --- */
+
+.container {
+  min-height: 100%;
+  pointer-events: none;
+  position: relative;
+  will-change: transform;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 834px) {
+  .container {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 100vh;
+    padding: 1.7361111111vw var(--grid-outer-gutter) 1.7361111111vw;
+  }
+}
+
+/* --- Inner (dark form container) --- */
+
+.inner {
+  background-color: #fff;
+  border-radius: 4.2666666667vw;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 4.2666666667vw;
+  pointer-events: all;
+  position: absolute;
+  right: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  top: 0;
+  transform: translateX(110%);
+  transition: transform 0.6s var(--ease-expo-out), visibility 0s 0.6s;
+  visibility: hidden;
+  z-index: 2;
+}
+
+.inner::-webkit-scrollbar {
+  display: none;
+}
+
+.open .inner {
+  transform: translateX(0);
+  transition: transform 0.6s var(--ease-expo-out), visibility 0s 0s;
+  visibility: visible;
+}
+
+@media only screen and (min-width: 834px) {
+  .inner {
+    border-radius: 1.6666666667vw;
+    bottom: auto;
+    height: auto;
+    left: auto;
+    max-height: calc(100vh - 3.4722222222vw);
+    min-height: auto;
+    padding: 2.2222222222vw;
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: translateX(calc(100% + var(--grid-outer-gutter) + 2vw));
+    width: 36.3888888889vw;
+  }
+
+  .open .inner {
+    transform: translateX(0);
+  }
+}
+
+/* --- Close Button --- */
+
+.closeButton {
+  align-items: center;
+  background-color: var(--color-yellow);
+  border: none;
+  border-radius: 2.6666666667vw;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  height: 11.7333333333vw;
+  justify-content: center;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: fixed;
+  right: var(--grid-outer-gutter);
+  top: var(--grid-outer-gutter);
+  transition: opacity 0.3s, visibility 0s 0.3s, background-color 0.2s, color 0.2s;
+  visibility: hidden;
+  width: 11.7333333333vw;
+  z-index: 10;
+}
+
+.closeButton svg {
+  overflow: visible;
+  width: 58%;
+}
+
+.closeButton circle {
+  will-change: transform;
+}
+
+.open .closeButton {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.3s, visibility 0s 0s, background-color 0.2s, color 0.2s;
+  visibility: visible;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .closeButton:hover {
+    background-color: var(--color-black);
+    color: #fff;
+  }
+}
+
+@media only screen and (min-width: 834px) {
+  .closeButton {
+    border-radius: 0.8333333333vw;
+    height: 3.3333333333vw;
+    right: calc(var(--grid-outer-gutter) + 37.5vw);
+    top: 3.8888888889vw;
+    width: 3.3333333333vw;
+    z-index: 2;
+  }
+}
+
+/* --- Background Overlay --- */
+
+.bg {
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  inset: 0;
+  opacity: 0;
+  position: fixed;
+  transition: opacity 0.4s, visibility 0s 0.4s;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.open .bg {
+  opacity: 1;
+  transition: opacity 0.4s, visibility 0s 0s;
+  visibility: visible;
+}

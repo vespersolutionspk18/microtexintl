@@ -1,0 +1,230 @@
+.section {
+  position: relative;
+}
+
+.sectionTitle {
+  color: var(--color-off-white);
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2rem, 7.4666666667vw, 7.4666666667vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0 var(--grid-outer-gutter);
+}
+
+@media only screen and (min-width: 834px) {
+  .sectionTitle {
+    font-size: clamp(3rem, 2.5vw, 2.5vw);
+    line-height: 1.167;
+  }
+}
+
+/* Carousel */
+.carousel {
+  align-items: center;
+  column-gap: var(--grid-gutter);
+  display: grid;
+  grid-auto-columns: 91.7333333333vw;
+  grid-auto-flow: column;
+  margin-top: 16vw;
+  overflow-x: auto;
+  padding: 0 var(--grid-outer-gutter);
+  scroll-snap-stop: always;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (min-width: 834px) {
+  .carousel {
+    grid-auto-columns: calc(50% - var(--grid-gutter) / 2 + var(--grid-outer-gutter));
+    margin-top: 3.3333333333vw;
+    overflow: visible;
+  }
+}
+
+/* Slide */
+.slide {
+  position: relative;
+  width: 100%;
+  padding-left: var(--grid-outer-gutter);
+  scroll-snap-align: start;
+}
+
+@media only screen and (min-width: 834px) {
+  .slide {
+    padding-left: unset;
+    scroll-snap-align: unset;
+  }
+
+  .slide::before {
+    background-color: var(--color-arsenic);
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: calc(100% - var(--grid-outer-gutter));
+  }
+
+  .slide:nth-child(odd) {
+    padding-left: var(--grid-outer-gutter);
+    scroll-snap-align: start;
+  }
+
+  .slide:nth-child(odd)::before {
+    left: var(--grid-outer-gutter);
+  }
+
+  .slide:nth-child(2n + 2) {
+    padding-right: var(--grid-outer-gutter);
+  }
+}
+
+/* Social card */
+.socialCard {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  row-gap: 17.0666666667vw;
+  padding-top: 5.3333333333vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .socialCard {
+    column-gap: var(--grid-gutter);
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1.6666666667vw;
+    row-gap: 0;
+  }
+}
+
+/* Card content (quote + link) */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8.5333333333vw;
+  width: 100%;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardContent {
+    order: 1;
+    row-gap: 2.2222222222vw;
+    width: 74%;
+  }
+}
+
+/* Quote text */
+.quote {
+  color: var(--color-off-white);
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.6rem, 5.3333333333vw, 5.3333333333vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+@media only screen and (min-width: 834px) {
+  .quote {
+    font-size: clamp(2rem, 1.6666666667vw, 1.6666666667vw);
+    font-weight: 300;
+    line-height: 1.167;
+  }
+}
+
+/* See post link */
+.seePost {
+  color: var(--color-silver);
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+@media only screen and (min-width: 834px) {
+  .seePost {
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .seePost:hover {
+    color: var(--color-off-white);
+  }
+}
+
+/* Author */
+.author {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 834px) {
+  .author {
+    order: 0;
+  }
+}
+
+.avatarWrapper {
+  border-radius: 50%;
+  height: 12.8vw;
+  overflow: hidden;
+  position: relative;
+  width: 12.8vw;
+}
+
+.avatarWrapper img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media only screen and (min-width: 834px) {
+  .avatarWrapper {
+    height: 5vw;
+    width: 5vw;
+  }
+}
+
+.authorName {
+  color: var(--color-off-white);
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  margin-top: 0.6rem;
+}
+
+@media only screen and (min-width: 834px) {
+  .authorName {
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+  }
+}
+
+.authorJob {
+  color: var(--color-silver);
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+}
+
+@media only screen and (min-width: 834px) {
+  .authorJob {
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+  }
+}

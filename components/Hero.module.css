@@ -1,0 +1,233 @@
+.homeHero {
+  height: 100lvh;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+
+.homeHero::before {
+  background: linear-gradient(to bottom, transparent 60%, #fafaf9 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.container {
+  height: 100svh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 834px) {
+  .container {
+    height: 100%;
+  }
+}
+
+.title {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2.8rem, 9.6vw, 9.6vw);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.167;
+  left: var(--grid-outer-gutter);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+@media only screen and (min-width: 834px) {
+  .title {
+    font-size: clamp(5rem, 4.4444444444vw, 4.4444444444vw);
+    letter-spacing: -0.04em;
+    line-height: 1.125;
+  }
+}
+
+.title span {
+  display: block;
+}
+
+.copy {
+  display: none;
+}
+
+@media only screen and (min-width: 834px) {
+  .copy {
+    bottom: var(--grid-outer-gutter);
+    display: block;
+    font-family: var(--font-base), sans-serif;
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+    font-weight: 300;
+    left: var(--grid-outer-gutter);
+    letter-spacing: -0.02em;
+    line-height: 1.375;
+    position: absolute;
+    color: #fff;
+  }
+
+  .copy span {
+    display: block;
+  }
+}
+
+.card {
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1.6rem;
+  bottom: var(--grid-outer-gutter);
+  column-gap: 1.2rem;
+  display: flex;
+  left: var(--grid-outer-gutter);
+  max-width: 40rem;
+  overflow: hidden;
+  padding: 0.6rem 0.6rem 0.6rem 1.6rem;
+  position: absolute;
+  width: calc(100% - var(--grid-outer-gutter) * 2);
+  z-index: 4;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card {
+    transition: background-color 0.2s;
+  }
+  .card:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media only screen and (min-width: 834px) {
+  .card {
+    border-radius: 1.1111111111vw;
+    bottom: 1.1111111111vw;
+    column-gap: 0.8333333333vw;
+    left: unset;
+    max-width: unset;
+    right: 1.0416666667vw;
+    width: auto;
+  }
+}
+
+.cardContent {
+  padding: 0.6rem 0;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardContent {
+    min-width: 18rem;
+    padding: 0.4513888889vw 0;
+    width: 14.3055555556vw;
+  }
+}
+
+.label {
+  align-items: center;
+  color: #d6d3d1;
+  display: flex;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+}
+
+.label::before {
+  background-color: currentColor;
+  border-radius: 50%;
+  content: "";
+  height: 0.6rem;
+  margin-right: 0.7rem;
+  width: 0.6rem;
+}
+
+@media only screen and (min-width: 834px) {
+  .label::before {
+    margin-right: 0.4166666667vw;
+  }
+}
+
+.cardCopy {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  color: #fff;
+  margin-top: 0.7rem;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardCopy {
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+    margin-top: 0.4861111111vw;
+  }
+}
+
+.cardImageWrapper {
+  aspect-ratio: 1;
+  border-radius: 2.4vw;
+  flex-shrink: 0;
+  max-width: 10.6rem;
+  overflow: hidden;
+  position: relative;
+  width: 28.2666666667vw;
+}
+
+.cardImageWrapper img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardImageWrapper {
+    border-radius: 0.625vw;
+    width: clamp(10.6rem, 7.3611111111vw, 12rem);
+  }
+}
+
+.videoWrapper {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.videoWrapper video {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  will-change: transform, opacity;
+}
+
+.bg {
+  background-color: #fafaf9;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

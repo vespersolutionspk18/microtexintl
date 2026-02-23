@@ -1,0 +1,30 @@
+.introLabel {
+  /* container - no specific styles needed */
+}
+
+.label {
+  align-items: center;
+  color: var(--color-silver);
+  display: flex;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+}
+
+.label::before {
+  background-color: currentColor;
+  border-radius: 50%;
+  content: "";
+  height: 0.6rem;
+  margin-right: 0.7rem;
+  width: 0.6rem;
+}
+
+@media only screen and (min-width: 834px) {
+  .label::before {
+    margin-right: 0.4166666667vw;
+  }
+}

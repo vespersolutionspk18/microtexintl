@@ -1,0 +1,193 @@
+.section {
+  background-color: var(--color-mid-grey);
+  display: flex;
+  flex-direction: column;
+  height: 100lvh;
+  overflow: hidden;
+  padding: 32vw var(--grid-outer-gutter) 11.4666666667vw;
+  position: relative;
+  row-gap: 16vw;
+  width: 100%;
+}
+
+@media only screen and (min-width: 834px) {
+  .section {
+    padding: 0;
+  }
+}
+
+.head {
+  color: var(--color-off-white);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  row-gap: 9.6vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .head {
+    left: var(--grid-outer-gutter);
+    position: absolute;
+    row-gap: 1.3194444444vw;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.title h2 {
+  color: currentColor;
+}
+
+.subtitleWrapper {
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.subtitle {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2rem, 7.4666666667vw, 7.4666666667vw);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.142;
+}
+
+@media only screen and (min-width: 834px) {
+  .subtitle {
+    font-size: clamp(3.6rem, 3.3333333333vw, 3.3333333333vw);
+    letter-spacing: -0.04em;
+    line-height: 1.167;
+  }
+}
+
+.card {
+  border-radius: 4.2666666667vw;
+  cursor: pointer;
+  display: block;
+  height: 110.4vw;
+  overflow: hidden;
+  padding: 4.2666666667vw;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  background-color: var(--color-arsenic);
+  background-image: url("https://www.on.energy/img/grid-volatility/desktop/grid-volatility_100.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (min-width: 834px) {
+  .card {
+    border-radius: 3.3333333333vw;
+    height: 37.9166666667vw;
+    padding: 1.9444444444vw;
+    position: absolute;
+    right: var(--grid-outer-gutter);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30.8333333333vw;
+  }
+}
+
+.cardTitle {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.6rem, 5.3333333333vw, 5.3333333333vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  width: 56.5333333333vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardTitle {
+    font-size: clamp(2rem, 1.6666666667vw, 1.6666666667vw);
+    font-weight: 300;
+    line-height: 1.167;
+    width: 21.7361111111vw;
+  }
+}
+
+.cardButton {
+  bottom: 4.2666666667vw;
+  position: absolute;
+  right: 4.2666666667vw;
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  border-radius: 50%;
+  width: 11.7333333333vw;
+  height: 11.7333333333vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardButton svg {
+  width: 5.3333333333vw;
+  height: 5.3333333333vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardButton {
+    bottom: 1.9444444444vw;
+    right: 1.9444444444vw;
+    width: 3.8888888889vw;
+    height: 3.8888888889vw;
+  }
+
+  .cardButton svg {
+    width: 1.3888888889vw;
+    height: 1.3888888889vw;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cardButton {
+    transition: color 0.2s, background-color 0.2s;
+  }
+
+  .card:hover .cardButton {
+    background-color: var(--color-black);
+    color: var(--color-off-white);
+  }
+}
+
+/* Exact from source: data-v-470c1c4c — .progress-wrapper */
+.progressWrapper {
+  background-color: var(--color-silver);
+  border-radius: 0.3rem;
+  bottom: 8vw;
+  height: 0.6rem;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  transform: translate(-50%);
+  transition: opacity 0.3s, visibility 0.3s;
+  width: 26.6666666667vw;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 834px) {
+  .progressWrapper {
+    bottom: 2.0833333333vw;
+    width: 6.9444444444vw;
+  }
+}
+
+/* Exact from source: data-v-470c1c4c — .progress */
+.progressBar {
+  background-color: var(--color-yellow);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  width: 100%;
+}
+
+.imageContainer,
+.imageWrapper {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

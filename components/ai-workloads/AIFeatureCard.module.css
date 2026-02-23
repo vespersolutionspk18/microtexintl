@@ -1,0 +1,127 @@
+.card {
+  aspect-ratio: 1;
+  background-color: var(--color-dark-grey);
+  border-radius: 6.4vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: var(--grid-outer-gutter);
+  position: relative;
+}
+
+@media only screen and (min-width: 834px) {
+  .card {
+    aspect-ratio: 674 / 450;
+    border-radius: 3.8888888889vw;
+    padding: 3.3333333333vw;
+  }
+}
+
+.iconWrapper {
+  color: var(--color-silver);
+  position: absolute;
+  right: 4.2666666667vw;
+  top: 4.2666666667vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .iconWrapper {
+    right: 3.3333333333vw;
+    top: 3.3333333333vw;
+  }
+}
+
+.icon {
+  height: 100%;
+  max-height: 26.6666666667vw;
+  max-width: 26.6666666667vw;
+  width: 100%;
+}
+
+@media only screen and (min-width: 834px) {
+  .icon {
+    max-height: 6.1111111111vw;
+    max-width: 6.9444444444vw;
+  }
+}
+
+.numberWrapper {
+  align-self: flex-end;
+  column-gap: 0;
+  display: flex;
+}
+
+.number {
+  color: var(--color-silver);
+  font-size: 25.6vw;
+  font-weight: 250;
+  letter-spacing: -0.08em;
+  line-height: 1;
+}
+
+.number span {
+  display: inline-block;
+  font-size: 7.4666666667vw;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  margin-left: 2.9333333333vw;
+  vertical-align: top;
+}
+
+@media only screen and (min-width: 834px) {
+  .number {
+    font-size: 8.3333333333vw;
+  }
+
+  .number span {
+    font-size: 2.5vw;
+    margin-left: 0.7638888889vw;
+  }
+}
+
+.content {
+  margin-top: auto;
+}
+
+.title {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.5rem, 4.8vw, 4.8vw);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.22;
+}
+
+@media only screen and (min-width: 834px) {
+  .title {
+    font-size: clamp(1.6rem, 1.3888888889vw, 1.3888888889vw);
+    line-height: 1.2;
+  }
+}
+
+.title span {
+  display: block;
+}
+
+.copy {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  color: var(--color-silver);
+  margin-top: 1.6vw;
+  max-width: 67.7333333333vw;
+}
+
+.copy a {
+  color: var(--color-off-white);
+}
+
+@media only screen and (min-width: 834px) {
+  .copy {
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+    font-weight: 300;
+    margin-top: 1.1111111111vw;
+    max-width: 20.8333333333vw;
+  }
+}

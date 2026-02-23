@@ -1,0 +1,206 @@
+.section {
+  background-color: #fafaf9;
+  padding: 32vw 0;
+  position: relative;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 834px) {
+  .section {
+    padding: 8.3333333333vw 0 10.4166666667vw;
+  }
+}
+
+.head {
+  grid-column: 1 / -1;
+  margin-bottom: 12.8vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .head {
+    grid-column: 1 / 9;
+    margin-bottom: 0;
+    position: sticky;
+    top: 8.3333333333vw;
+    align-self: start;
+  }
+}
+
+.label {
+  align-items: center;
+  color: var(--color-silver);
+  display: flex;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+}
+
+.label::before {
+  background-color: currentColor;
+  border-radius: 50%;
+  content: "";
+  height: 0.6rem;
+  margin-right: 0.7rem;
+  width: 0.6rem;
+}
+
+@media only screen and (min-width: 834px) {
+  .label::before {
+    margin-right: 0.4166666667vw;
+  }
+}
+
+.title {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2.8rem, 7.4666666667vw, 7.4666666667vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-top: 3.4666666667vw;
+  color: var(--color-off-white);
+}
+
+@media only screen and (min-width: 834px) {
+  .title {
+    font-size: clamp(3rem, 2.5vw, 2.5vw);
+    line-height: 1.167;
+    margin-top: 0.9027777778vw;
+  }
+}
+
+.title span {
+  display: block;
+}
+
+.applications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6vw;
+  margin-top: 6.4vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .applications {
+    gap: 0.4166666667vw;
+    margin-top: 2.0833333333vw;
+  }
+}
+
+.tag {
+  background-color: var(--color-dark-grey);
+  border-radius: 10rem;
+  color: var(--color-mid-grey);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  padding: 0.8vw 3.2vw;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 834px) {
+  .tag {
+    padding: 0.2083333333vw 0.8333333333vw;
+    font-size: 1rem;
+  }
+}
+
+/* Features Grid */
+.features {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / -1;
+  row-gap: 4.2666666667vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .features {
+    display: grid;
+    grid-column: 10 / -1;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6666666667vw;
+    row-gap: 1.6666666667vw;
+  }
+}
+
+.featureCard {
+  background-color: var(--color-dark-grey);
+  border-radius: 6.4vw;
+  display: flex;
+  flex-direction: column;
+  padding: 6.4vw;
+  row-gap: 2.6666666667vw;
+  opacity: 0;
+  transform: translateY(3rem);
+  transition:
+    opacity 0.7s cubic-bezier(0.33, 1, 0.68, 1),
+    transform 0.7s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.featureReveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media only screen and (min-width: 834px) {
+  .featureCard {
+    border-radius: 1.3888888889vw;
+    padding: 2.0833333333vw;
+    row-gap: 0.9722222222vw;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .featureCard {
+    transition:
+      opacity 0.7s cubic-bezier(0.33, 1, 0.68, 1),
+      transform 0.7s cubic-bezier(0.33, 1, 0.68, 1),
+      background-color 0.3s;
+  }
+  .featureCard:hover {
+    background-color: #ece9e7;
+  }
+}
+
+.featureIndex {
+  color: var(--color-silver);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+}
+
+.featureTitle {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.6rem, 5.3333333333vw, 5.3333333333vw);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--color-off-white);
+}
+
+@media only screen and (min-width: 834px) {
+  .featureTitle {
+    font-size: clamp(1.6rem, 1.3888888889vw, 1.3888888889vw);
+  }
+}
+
+.featureDescription {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  color: var(--color-mid-grey);
+}
+
+@media only screen and (min-width: 834px) {
+  .featureDescription {
+    font-size: clamp(1.2rem, 0.9722222222vw, 1.4rem);
+  }
+}

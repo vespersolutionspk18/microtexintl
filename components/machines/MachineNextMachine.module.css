@@ -1,0 +1,209 @@
+.section {
+  background-color: #292524;
+  color: #fff;
+  padding: 32vw 0;
+  position: relative;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 834px) {
+  .section {
+    padding: 6.9444444444vw 0 8.3333333333vw;
+  }
+}
+
+.head {
+  grid-column: 1 / -1;
+  margin-bottom: 6.4vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .head {
+    margin-bottom: 2.0833333333vw;
+  }
+}
+
+.label {
+  align-items: center;
+  color: var(--color-silver);
+  display: flex;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+}
+
+.label::before {
+  background-color: var(--color-yellow);
+  border-radius: 50%;
+  content: "";
+  height: 0.6rem;
+  margin-right: 0.7rem;
+  width: 0.6rem;
+}
+
+@media only screen and (min-width: 834px) {
+  .label::before {
+    margin-right: 0.4166666667vw;
+  }
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6.4vw;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / -1;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(3rem);
+  transition:
+    opacity 0.8s var(--ease-expo-out),
+    transform 0.8s var(--ease-expo-out);
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media only screen and (min-width: 834px) {
+  .card {
+    border-radius: 1.6666666667vw;
+    flex-direction: row;
+    min-height: 22.2222222222vw;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card {
+    transition:
+      opacity 0.8s var(--ease-expo-out),
+      transform 0.8s var(--ease-expo-out),
+      background-color 0.3s;
+  }
+  .card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .card:hover .imageWrapper img {
+    transform: scale(1.05);
+  }
+  .card:hover .arrowButton {
+    background-color: #fff;
+    color: #292524;
+  }
+}
+
+.imageWrapper {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+@media only screen and (min-width: 834px) {
+  .imageWrapper {
+    aspect-ratio: auto;
+    border-radius: 1.1111111111vw;
+    margin: 0.8333333333vw;
+    width: 35%;
+  }
+}
+
+.imageWrapper img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: transform 0.8s var(--ease-expo-out);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 6.4vw var(--grid-outer-gutter);
+}
+
+@media only screen and (min-width: 834px) {
+  .cardBody {
+    justify-content: center;
+    padding: 2.7777777778vw;
+  }
+}
+
+.cardModel {
+  color: var(--color-silver);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+}
+
+.cardName {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2.8rem, 8.5333333333vw, 8.5333333333vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-top: 2.6666666667vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardName {
+    font-size: clamp(3.6rem, 3.3333333333vw, 3.3333333333vw);
+    margin-top: 0.6944444444vw;
+  }
+}
+
+.cardTagline {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  color: var(--color-silver);
+  margin-top: 2.6666666667vw;
+  max-width: 85%;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardTagline {
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+    margin-top: 0.6944444444vw;
+    max-width: 22.2222222222vw;
+  }
+}
+
+.arrowButton {
+  align-items: center;
+  background-color: var(--color-yellow);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  height: 10.6666666667vw;
+  justify-content: center;
+  margin-top: 6.4vw;
+  width: 10.6666666667vw;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@media only screen and (min-width: 834px) {
+  .arrowButton {
+    height: 2.7777777778vw;
+    margin-top: 2.0833333333vw;
+    width: 2.7777777778vw;
+  }
+}
+
+.arrowButton svg {
+  width: 50%;
+}

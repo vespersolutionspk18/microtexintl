@@ -1,0 +1,140 @@
+.section {
+}
+
+.title {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2rem, 7.4666666667vw, 7.4666666667vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0 var(--grid-outer-gutter);
+}
+
+@media only screen and (min-width: 834px) {
+  .title {
+    font-size: clamp(3rem, 2.5vw, 2.5vw);
+    line-height: 1.167;
+  }
+}
+
+.cards {
+  margin-top: 9.6vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .cards {
+    margin-top: 2.5vw;
+  }
+}
+
+.cardsInner {
+  column-gap: var(--grid-gutter);
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(var(--grid-column-count), 1fr);
+  row-gap: 2.6666666667vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardsInner {
+    row-gap: 1.6666666667vw;
+  }
+}
+
+/* Exact from source: SlideUpReveal for deployment cards */
+.card {
+  aspect-ratio: 676 / 450;
+  border-radius: 4.2666666667vw;
+  grid-column: 1 / -1;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.5s cubic-bezier(0.33, 1, 0.68, 1),
+    transform 1.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.cardReveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media only screen and (min-width: 834px) {
+  .card {
+    border-radius: 2.2222222222vw;
+    grid-column: span 12;
+  }
+}
+
+.cardImageWrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.cardImageWrapper::before {
+  background-color: rgba(0, 0, 0, 0.3);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.cardImageWrapper img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.cardContent {
+  bottom: 0;
+  left: 0;
+  padding: 2.9333333333vw 4.2666666667vw;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardContent {
+    padding: 2.0833333333vw;
+  }
+}
+
+.cardTitle {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2.8rem, 9.6vw, 9.6vw);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.167;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardTitle {
+    font-size: clamp(5rem, 4.4444444444vw, 4.4444444444vw);
+    letter-spacing: -0.04em;
+    line-height: 1.125;
+  }
+}
+
+.cardCopy {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.5rem, 4.8vw, 4.8vw);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.22;
+  color: var(--color-light-grey);
+}
+
+@media only screen and (min-width: 834px) {
+  .cardCopy {
+    font-size: clamp(1.6rem, 1.3888888889vw, 1.3888888889vw);
+    line-height: 1.2;
+    margin-top: 0.3472222222vw;
+  }
+}

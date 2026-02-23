@@ -1,0 +1,229 @@
+.card {
+  background-color: var(--color-dark-grey);
+  border-radius: 4.2666666667vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 834px) {
+  .card {
+    border-radius: 1.6666666667vw;
+  }
+}
+
+/* Image */
+.imageWrapper {
+  aspect-ratio: 16 / 9;
+  background-color: #fff;
+  border-radius: 3.2vw;
+  margin: 2.1333333333vw;
+  overflow: hidden;
+  position: relative;
+}
+
+@media only screen and (min-width: 834px) {
+  .imageWrapper {
+    border-radius: 1.1111111111vw;
+    margin: 0.8333333333vw;
+  }
+}
+
+.imageWrapper img {
+  height: 80%;
+  left: 50%;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .imageWrapper img {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+/* Body */
+.body {
+  display: flex;
+  flex-direction: column;
+  padding: 3.2vw 4.2666666667vw 5.3333333333vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .body {
+    padding: 1.25vw 1.6666666667vw 2.0833333333vw;
+  }
+}
+
+/* Category */
+.category {
+  align-items: center;
+  color: var(--color-silver);
+  display: flex;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+}
+
+.category::before {
+  background-color: var(--color-yellow);
+  border-radius: 50%;
+  content: "";
+  height: 0.6rem;
+  margin-right: 0.7rem;
+  width: 0.6rem;
+}
+
+@media only screen and (min-width: 834px) {
+  .category::before {
+    margin-right: 0.4166666667vw;
+  }
+}
+
+/* Name */
+.name {
+  color: var(--color-off-white);
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2rem, 5.3333333333vw, 5.3333333333vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-top: 1.6vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .name {
+    font-size: clamp(1.8rem, 1.3888888889vw, 2.2rem);
+    margin-top: 0.4166666667vw;
+  }
+}
+
+/* Specs table */
+.specs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.2666666667vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .specs {
+    margin-top: 1.3888888889vw;
+  }
+}
+
+.specRow {
+  align-items: baseline;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding: 2.1333333333vw 0;
+}
+
+.specRow:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+@media only screen and (min-width: 834px) {
+  .specRow {
+    padding: 0.4166666667vw 0;
+  }
+}
+
+.specLabel {
+  color: var(--color-silver);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 834px) {
+  .specLabel {
+    font-size: 1rem;
+  }
+}
+
+.specValue {
+  color: var(--color-off-white);
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.2rem, 3.4666666667vw, 1.4rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  text-align: right;
+}
+
+@media only screen and (min-width: 834px) {
+  .specValue {
+    font-size: clamp(1.1rem, 0.8333333333vw, 1.3rem);
+  }
+}
+
+/* Button */
+.button {
+  align-items: center;
+  background-color: var(--color-yellow);
+  border-radius: 0.4rem;
+  color: #fff;
+  display: flex;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  height: 4rem;
+  justify-content: center;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  margin-top: 5.3333333333vw;
+  overflow: hidden;
+  padding: 0 2.4rem;
+  position: relative;
+  text-decoration: none;
+  width: fit-content;
+}
+
+@media only screen and (min-width: 834px) {
+  .button {
+    margin-top: 1.6666666667vw;
+  }
+}
+
+.buttonFill {
+  background: var(--color-black);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(-101%);
+  width: 100%;
+  z-index: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .buttonFill {
+    transition: transform 0.4s var(--ease-expo-in-out);
+    will-change: transform;
+  }
+  .button:hover .buttonFill {
+    transform: translateZ(0);
+  }
+  .button {
+    transition: color 0.6s;
+  }
+  .button:hover {
+    color: #fff;
+  }
+}
+
+.buttonLabel {
+  position: relative;
+  z-index: 2;
+}

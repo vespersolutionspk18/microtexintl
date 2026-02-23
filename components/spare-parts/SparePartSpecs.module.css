@@ -1,0 +1,219 @@
+.section {
+  background-color: #fafaf9;
+  color: #000;
+  padding: 32vw 0;
+  position: relative;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 834px) {
+  .section {
+    padding: 8.3333333333vw 0 10.4166666667vw;
+  }
+}
+
+.specBlock {
+  grid-column: 1 / -1;
+  margin-bottom: 16vw;
+}
+
+.specBlock:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 834px) {
+  .specBlock {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+    margin-bottom: 5.5555555556vw;
+  }
+}
+
+.specHead {
+  margin-bottom: 8.5333333333vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .specHead {
+    grid-column: 1 / 9;
+    margin-bottom: 0;
+  }
+}
+
+.specLabel {
+  align-items: center;
+  color: var(--color-silver);
+  display: flex;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+}
+
+.specLabel::before {
+  background-color: var(--color-yellow);
+  border-radius: 50%;
+  content: "";
+  height: 0.6rem;
+  margin-right: 0.7rem;
+  width: 0.6rem;
+}
+
+@media only screen and (min-width: 834px) {
+  .specLabel::before {
+    margin-right: 0.4166666667vw;
+  }
+}
+
+.specTitle {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2.4rem, 6.4vw, 6.4vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-top: 3.4666666667vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .specTitle {
+    font-size: clamp(2.4rem, 2.0833333333vw, 2.0833333333vw);
+    line-height: 1.167;
+    margin-top: 0.9027777778vw;
+  }
+}
+
+.specDescription {
+  color: var(--color-silver);
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.6rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  margin-top: 4.2666666667vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .specDescription {
+    font-size: clamp(1.2rem, 0.9722222222vw, 1.4rem);
+    margin-top: 1.3888888889vw;
+  }
+}
+
+/* Features pills */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6vw;
+  margin-top: 5.3333333333vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .features {
+    gap: 0.4166666667vw;
+    margin-top: 1.6666666667vw;
+  }
+}
+
+.featureTag {
+  background-color: var(--color-dark-grey);
+  border-radius: 10rem;
+  color: var(--color-silver);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  padding: 0.8vw 3.2vw;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 834px) {
+  .featureTag {
+    padding: 0.2083333333vw 0.8333333333vw;
+    font-size: 1rem;
+  }
+}
+
+/* Table */
+.tableWrapper {
+  overflow-x: auto;
+}
+
+@media only screen and (min-width: 834px) {
+  .tableWrapper {
+    grid-column: 10 / -1;
+  }
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table thead th {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  color: var(--color-silver);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  padding: 3.2vw 2.1333333333vw;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 834px) {
+  .table thead th {
+    padding: 0.6944444444vw;
+    font-size: 1rem;
+  }
+}
+
+.table tbody td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.6rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  padding: 3.2vw 2.1333333333vw;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 834px) {
+  .table tbody td {
+    font-size: clamp(1.2rem, 0.9722222222vw, 1.4rem);
+    padding: 0.6944444444vw;
+  }
+}
+
+.table tbody tr {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition:
+    opacity 0.5s cubic-bezier(0.33, 1, 0.68, 1),
+    transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.tableReveal tbody tr {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .table tbody tr {
+    transition:
+      opacity 0.5s cubic-bezier(0.33, 1, 0.68, 1),
+      transform 0.5s cubic-bezier(0.33, 1, 0.68, 1),
+      background-color 0.2s;
+    border-radius: 0.2rem;
+  }
+  .table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+}

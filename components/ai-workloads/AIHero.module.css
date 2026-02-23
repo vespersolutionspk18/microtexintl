@@ -1,0 +1,151 @@
+.hero {
+  height: 100lvh;
+  position: relative;
+}
+
+.container {
+  align-content: end;
+  grid-template-rows: auto auto;
+  height: 100svh;
+  padding-bottom: 6.4vw;
+  position: relative;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 834px) {
+  .container {
+    height: 100%;
+    padding-bottom: 2.7777777778vw;
+  }
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / -1;
+  row-gap: 6.4vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .titleWrapper {
+    grid-column: 1 / 13;
+    left: var(--grid-outer-gutter);
+    position: absolute;
+    row-gap: 2.2222222222vw;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* Exact from source: FadeReveal for label pill — autoAlpha 0→1, duration 0.6, ease sine.in */
+.label {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 1.6vw;
+  color: var(--color-mid-grey);
+  display: flex;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  height: 7.4666666667vw;
+  justify-content: center;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+  padding: 0 2.6666666667vw;
+  text-transform: uppercase;
+  width: fit-content;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.labelVisible {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 834px) {
+  .label {
+    border-radius: 0.4166666667vw;
+    height: 1.9444444444vw;
+    padding: 0 0.6944444444vw;
+  }
+}
+
+.title {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2.8rem, 9.6vw, 9.6vw);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.167;
+}
+
+@media only screen and (min-width: 834px) {
+  .title {
+    font-size: clamp(5rem, 4.4444444444vw, 4.4444444444vw);
+    letter-spacing: -0.04em;
+    line-height: 1.125;
+  }
+}
+
+.title > span {
+  display: block;
+}
+
+.copy {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  color: var(--color-mid-grey);
+  grid-column: 1 / -1;
+  margin-top: 37.3333333333vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .copy {
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+    font-weight: 300;
+    grid-column: 1 / 8;
+    margin-top: 10.4166666667vw;
+  }
+}
+
+/* Hero copy animation handled by GSAP SplitText — y:40→0 + autoAlpha 0→1, stagger 0.08 */
+
+.copy span {
+  color: var(--color-off-white);
+}
+
+.sequenceWrapper {
+  overflow: hidden;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.sequence {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  will-change: transform, opacity;
+  background-color: var(--color-dark-grey);
+  background-image: url("https://www.on.energy/img/ai-workloads/desktop/ai-workloads_100.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg {
+  background-color: var(--color-black);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

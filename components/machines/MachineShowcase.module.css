@@ -1,0 +1,45 @@
+.showcase {
+  padding: 0 var(--grid-outer-gutter);
+  position: relative;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 834px) {
+  .showcase {
+    padding: 0 1.0416666667vw;
+  }
+}
+
+.imageContainer {
+  border-radius: 6.4vw;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  transform: scale(0.95);
+  opacity: 0;
+  transition:
+    transform 1.2s var(--ease-expo-out),
+    opacity 1s ease;
+}
+
+.revealed {
+  transform: scale(1);
+  opacity: 1;
+}
+
+@media only screen and (min-width: 834px) {
+  .imageContainer {
+    aspect-ratio: 21 / 9;
+    border-radius: 1.6666666667vw;
+  }
+}
+
+.image {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

@@ -1,0 +1,30 @@
+.teamIntro {
+  margin: 13.3333333333vw var(--grid-outer-gutter) 0;
+}
+
+@media only screen and (min-width: 834px) {
+  .teamIntro {
+    margin: 5vw var(--grid-outer-gutter) 0;
+  }
+}
+
+.copy {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2rem, 7.4666666667vw, 7.4666666667vw);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.142;
+  color: var(--color-arsenic);
+}
+
+@media only screen and (min-width: 834px) {
+  .copy {
+    font-size: clamp(3.6rem, 3.3333333333vw, 3.3333333333vw);
+    letter-spacing: -0.04em;
+    line-height: 1.167;
+  }
+}
+
+.copy span {
+  color: var(--color-off-white);
+}

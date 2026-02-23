@@ -1,0 +1,312 @@
+.catalog {
+  background-color: #fafaf9;
+  padding: 32vw 0;
+  position: relative;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 834px) {
+  .catalog {
+    padding: 8.3333333333vw 0 10.4166666667vw;
+  }
+}
+
+.head {
+  grid-column: 1 / -1;
+  margin-bottom: 12.8vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .head {
+    grid-column: 1 / 13;
+    margin-bottom: 4.1666666667vw;
+  }
+}
+
+.label {
+  align-items: center;
+  color: var(--color-silver);
+  display: flex;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+}
+
+.label::before {
+  background-color: currentColor;
+  border-radius: 50%;
+  content: "";
+  height: 0.6rem;
+  margin-right: 0.7rem;
+  width: 0.6rem;
+}
+
+@media only screen and (min-width: 834px) {
+  .label::before {
+    margin-right: 0.4166666667vw;
+  }
+}
+
+.title {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2.8rem, 7.4666666667vw, 7.4666666667vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-top: 3.4666666667vw;
+  color: var(--color-off-white);
+}
+
+@media only screen and (min-width: 834px) {
+  .title {
+    font-size: clamp(3rem, 2.5vw, 2.5vw);
+    line-height: 1.167;
+    margin-top: 0.9027777778vw;
+  }
+}
+
+.title span {
+  display: block;
+}
+
+/* Cards Grid */
+.cards {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / -1;
+  row-gap: 4.2666666667vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .cards {
+    row-gap: 1.6666666667vw;
+  }
+}
+
+/* Individual Card */
+.card {
+  background-color: var(--color-dark-grey);
+  border-radius: 6.4vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(4rem);
+  transition:
+    opacity 0.8s cubic-bezier(0.33, 1, 0.68, 1),
+    transform 0.8s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.cardReveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media only screen and (min-width: 834px) {
+  .card {
+    border-radius: 1.6666666667vw;
+    flex-direction: row;
+    min-height: 25vw;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card {
+    transition:
+      opacity 0.8s cubic-bezier(0.33, 1, 0.68, 1),
+      transform 0.8s cubic-bezier(0.33, 1, 0.68, 1),
+      background-color 0.3s;
+  }
+
+  .card:hover {
+    background-color: #ece9e7;
+  }
+
+  .card:hover .imageWrapper img {
+    transform: scale(1.04);
+  }
+
+  .card:hover .arrowButton {
+    background-color: var(--color-off-white);
+    color: #fff;
+  }
+}
+
+/* Card Image */
+.imageWrapper {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+@media only screen and (min-width: 834px) {
+  .imageWrapper {
+    aspect-ratio: auto;
+    border-radius: 1.1111111111vw;
+    margin: 0.8333333333vw;
+    width: 40%;
+  }
+}
+
+.imageWrapper img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: transform 0.8s var(--ease-expo-out);
+}
+
+/* Card Body */
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  padding: 6.4vw var(--grid-outer-gutter);
+  flex: 1;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardBody {
+    justify-content: space-between;
+    padding: 2.7777777778vw 2.7777777778vw 2.0833333333vw;
+  }
+}
+
+.cardMeta {
+  align-items: center;
+  column-gap: 2.1333333333vw;
+  display: flex;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardMeta {
+    column-gap: 0.6944444444vw;
+  }
+}
+
+.cardModel {
+  color: var(--color-silver);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+}
+
+.cardCategory {
+  color: var(--color-mid-grey);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  text-transform: uppercase;
+}
+
+.cardCategory::before {
+  content: "\2022";
+  margin-right: 2.1333333333vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardCategory::before {
+    margin-right: 0.6944444444vw;
+  }
+}
+
+.cardName {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2.4rem, 7.4666666667vw, 7.4666666667vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-top: 4.2666666667vw;
+  color: var(--color-off-white);
+}
+
+@media only screen and (min-width: 834px) {
+  .cardName {
+    font-size: clamp(3rem, 2.7777777778vw, 2.7777777778vw);
+    line-height: 1.1;
+    margin-top: 1.3888888889vw;
+  }
+}
+
+.cardTagline {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  color: var(--color-mid-grey);
+  margin-top: 2.6666666667vw;
+  max-width: 85%;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardTagline {
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+    margin-top: 0.9722222222vw;
+    max-width: 22.2222222222vw;
+  }
+}
+
+.cardFooter {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6.4vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardFooter {
+    margin-top: auto;
+    padding-top: 2.0833333333vw;
+  }
+}
+
+.cardOutput {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2rem, 5.3333333333vw, 5.3333333333vw);
+  font-weight: 250;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--color-silver);
+}
+
+@media only screen and (min-width: 834px) {
+  .cardOutput {
+    font-size: clamp(3rem, 2.5vw, 2.5vw);
+  }
+}
+
+.arrowButton {
+  align-items: center;
+  background-color: var(--color-yellow);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  height: 10.6666666667vw;
+  justify-content: center;
+  width: 10.6666666667vw;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@media only screen and (min-width: 834px) {
+  .arrowButton {
+    border-radius: 50%;
+    height: 2.7777777778vw;
+    width: 2.7777777778vw;
+  }
+}
+
+.arrowButton svg {
+  width: 50%;
+}

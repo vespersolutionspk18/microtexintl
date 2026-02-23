@@ -1,0 +1,37 @@
+.controls {
+  display: none;
+}
+
+@media only screen and (min-width: 834px) {
+  .controls {
+    bottom: 2.0833333333vw;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1.3888888889vw;
+    row-gap: 0.3rem;
+  }
+}
+
+.button {
+  background-color: var(--color-arsenic);
+  border-radius: 50%;
+  color: var(--color-off-white);
+  width: 3.8888888889vw;
+  height: 3.8888888889vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.button svg {
+  width: 1.875vw;
+  height: 1.875vw;
+}

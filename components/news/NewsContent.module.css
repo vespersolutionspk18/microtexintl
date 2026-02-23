@@ -1,0 +1,13 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 16vw 0 53.3333333333vw;
+  row-gap: 53.3333333333vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .content {
+    margin: 4.1666666667vw 0 13.8888888889vw;
+    row-gap: 13.8888888889vw;
+  }
+}

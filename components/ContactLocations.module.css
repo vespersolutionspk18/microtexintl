@@ -1,0 +1,148 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32vw;
+  padding-bottom: 32vw;
+  row-gap: 16vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .section {
+    margin-top: 13.8888888889vw;
+    padding-bottom: 4.1666666667vw;
+    row-gap: 4.1666666667vw;
+  }
+}
+
+/* --- Location Card --- */
+
+.location {
+  border-bottom: 1px solid var(--color-arsenic);
+  padding-bottom: 26.6666666667vw;
+  position: relative;
+}
+
+@media only screen and (min-width: 834px) {
+  .location {
+    border: none;
+    padding-bottom: 0;
+  }
+
+  .location::before {
+    background-color: var(--color-arsenic);
+    content: "";
+    height: 0.1rem;
+    left: var(--grid-outer-gutter);
+    position: absolute;
+    top: 0;
+    width: 70.9722222222vw;
+  }
+}
+
+.locationGrid {
+  column-gap: var(--grid-gutter);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), 1fr);
+  padding: 0 var(--grid-outer-gutter);
+}
+
+/* --- Image --- */
+
+.imageWrapper {
+  border-radius: 4.2666666667vw;
+  grid-column: 1 / -1;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 834px) {
+  .imageWrapper {
+    border-radius: 1.1111111111vw;
+    grid-column: 19 / 25;
+    order: 2;
+  }
+}
+
+.imageWrapper img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+/* --- Country --- */
+
+.country {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(2rem, 7.4666666667vw, 7.4666666667vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  grid-column: 1 / -1;
+  margin-top: 16vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .country {
+    font-size: clamp(3rem, 2.5vw, 2.5vw);
+    line-height: 1.167;
+    grid-column: span 6;
+    margin-top: 0;
+    order: 0;
+    padding-top: 2.0833333333vw;
+  }
+}
+
+/* --- Offices --- */
+
+.offices {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / -1;
+  margin-top: 16vw;
+  row-gap: 16vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .offices {
+    grid-column: span 10;
+    margin-top: 0;
+    order: 1;
+    padding-top: 2.0833333333vw;
+    row-gap: 4.1666666667vw;
+  }
+}
+
+/* --- Office --- */
+
+.office {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  color: var(--color-mid-grey);
+}
+
+@media only screen and (min-width: 834px) {
+  .office {
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+  }
+}
+
+.city {
+  color: var(--color-off-white);
+}
+
+.address span {
+  display: block;
+}
+
+.phone {
+  color: var(--color-mid-grey);
+  text-decoration: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .phone:hover {
+    color: var(--color-off-white);
+  }
+}

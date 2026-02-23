@@ -1,0 +1,52 @@
+.section {
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+
+.section.dark {
+  background-color: #000;
+}
+
+.section.light {
+  background-color: #fafaf9;
+}
+
+.wrapper {
+  grid-column: 1 / -1;
+  overflow: hidden;
+  border-radius: 4.2666666667vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .wrapper {
+    border-radius: 1.3888888889vw;
+  }
+}
+
+.wrapperFull {
+  overflow: hidden;
+}
+
+.imageOuter {
+  height: 60vw;
+  overflow: hidden;
+  position: relative;
+  will-change: transform;
+}
+
+@media only screen and (min-width: 834px) {
+  .imageOuter {
+    height: 34.7222222222vw;
+  }
+}
+
+.imageOuter img {
+  height: 130%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: -15%;
+  width: 100%;
+  will-change: transform;
+}

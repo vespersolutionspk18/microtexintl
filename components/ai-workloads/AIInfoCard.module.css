@@ -1,0 +1,508 @@
+/* Exact from source: data-v-7c7268b4 — .expertise-info-card-wrapper */
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.0666666667vw;
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+@media only screen and (max-width: 833px) {
+  .cardWrapper > div:nth-child(2) {
+    opacity: 0;
+    transform: translateY(5rem);
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 834px) {
+  .cardWrapper {
+    row-gap: 0.2777777778vw;
+    grid-column: 1 / 7;
+    margin-top: 4.1666666667vw;
+  }
+}
+
+/* Exact from source: data-v-829b9ee1 — .expertise-info-card */
+.card {
+  background-color: var(--color-black);
+  border-radius: 4.2666666667vw;
+  overflow: hidden;
+  padding: 4.2666666667vw;
+  position: relative;
+}
+
+.card.darkGrey {
+  background-color: var(--color-dark-grey);
+}
+
+.card.charcoal {
+  background-color: var(--color-charcoal);
+}
+
+.cardYellow {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+@media only screen and (min-width: 834px) {
+  .card {
+    border-radius: 1.1111111111vw;
+    padding: 1.6666666667vw;
+  }
+}
+
+.cardHead {
+  align-items: center;
+  column-gap: 0.6rem;
+  display: flex;
+}
+
+.cardIcon {
+  color: var(--color-black);
+  overflow: visible;
+}
+
+.cardYellow .cardIcon {
+  color: var(--color-yellow);
+}
+
+.iconSuccess {
+  width: 1.2rem;
+}
+
+.iconWarning {
+  width: 1.4rem;
+}
+
+.cardTitle {
+  color: var(--color-off-white);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  opacity: 0.6;
+  position: relative;
+  top: 0.2rem;
+}
+
+.cardYellow .cardTitle {
+  color: var(--color-black);
+}
+
+.cardBody {
+  margin-top: 4.2666666667vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardBody {
+    margin-top: 2.5vw;
+  }
+}
+
+.cardSubtitle {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.6rem, 5.3333333333vw, 5.3333333333vw);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  max-width: 85%;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardSubtitle {
+    font-size: clamp(2rem, 1.6666666667vw, 1.6666666667vw);
+    font-weight: 300;
+    line-height: 1.167;
+    max-width: none;
+  }
+}
+
+.cardCopy {
+  font-family: var(--font-base), sans-serif;
+  font-size: clamp(1.3rem, 3.7333333333vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.375;
+  margin-top: 3.2vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .cardCopy {
+    font-size: clamp(1.4rem, 1.1111111111vw, 1.8rem);
+    font-weight: 300;
+    margin-top: 1.1111111111vw;
+  }
+}
+
+.expandButton {
+  position: absolute;
+  right: 4.2666666667vw;
+  top: 4.2666666667vw;
+}
+
+.cardYellow .expandButton {
+  background-color: var(--color-black);
+}
+
+@media only screen and (min-width: 834px) {
+  .expandButton {
+    display: none;
+  }
+}
+
+/* Exact from source: data-v-7afeeb3b — .chart wrapper */
+.chart {
+  background-color: var(--color-black);
+  border-radius: 4.2666666667vw;
+  overflow: hidden;
+  padding: 6.4vw;
+}
+
+.chart.chartDarkGrey {
+  background-color: var(--color-dark-grey);
+}
+
+.chart.chartCharcoal {
+  background-color: var(--color-charcoal);
+}
+
+.chart.chartYellow {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+@media only screen and (min-width: 834px) {
+  .chart {
+    border-radius: 1.1111111111vw;
+    padding: 1.6666666667vw;
+  }
+}
+
+/* Exact from source: data-v-74a50d83 — list chart */
+.chartHead {
+  color: var(--color-silver);
+  column-gap: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chartTitle,
+.chartPercentage,
+.chartSubtitle {
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+}
+
+.chartSubtitle {
+  color: var(--color-silver);
+  margin-top: 4.8vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .chartSubtitle {
+    margin-top: 1.25vw;
+  }
+}
+
+.chartList {
+  margin-top: 3.2vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .chartList {
+    margin-top: 0.8333333333vw;
+  }
+}
+
+.listItem {
+  align-items: center;
+  border-top: 1px solid var(--color-arsenic);
+  column-gap: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+}
+
+.listItemTitle {
+  font-family: var(--font-base), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+}
+
+.listItemStatus {
+  align-items: center;
+  column-gap: 0.5rem;
+  display: flex;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  color: var(--color-red);
+}
+
+.listItemProtected .listItemStatus,
+.listItemApproved .listItemStatus {
+  color: var(--color-yellow);
+}
+
+.listItemVulnerable .listItemStatus {
+  color: var(--color-red);
+}
+
+.listItemIconButton {
+  background-color: var(--color-yellow);
+  border-radius: 50%;
+  color: var(--color-black);
+  height: 1.2rem;
+  width: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ======================================================================
+   Exact from source: Canvas chart components
+   VoltageInstabilityChart (data-v-680783a3)
+   DataCenterDemandChart (data-v-bfa52a43)
+   PeakDemandChart (data-v-f1961ac4)
+   ====================================================================== */
+
+/* Shared canvas chart head — no layout for VoltageInstability */
+.canvasChartHead {
+  /* Container only, no styles needed for voltage/peak */
+}
+
+/* Shared canvas chart title (data-v-680783a3 .title, data-v-f1961ac4 .title) */
+.canvasChartTitle {
+  color: var(--color-silver);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+}
+
+.chartYellow .canvasChartTitle {
+  color: var(--color-black);
+}
+
+/* Shared canvas element positioning */
+.canvasChartCanvas {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* ---- VoltageInstabilityChart (data-v-680783a3) ---- */
+
+.voltageChartWrapper {
+  aspect-ratio: 282 / 78;
+  margin-top: 4.8vw;
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+}
+
+@media only screen and (min-width: 834px) {
+  .voltageChartWrapper {
+    margin-top: 1.25vw;
+  }
+}
+
+.canvasChartListWrapper {
+  margin-top: 4.8vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .canvasChartListWrapper {
+    margin-top: 1.25vw;
+  }
+}
+
+.canvasChartListTitle {
+  color: var(--color-silver);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+}
+
+.canvasChartList {
+  margin-top: 3.2vw;
+}
+
+@media only screen and (min-width: 834px) {
+  .canvasChartList {
+    margin-top: 0.8333333333vw;
+  }
+}
+
+.canvasChartListItem {
+  align-items: center;
+  border-top: 1px solid var(--color-arsenic);
+  column-gap: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+}
+
+.canvasChartListItemBad .canvasChartListItemStatus {
+  color: var(--color-red);
+}
+
+.canvasChartListItemTitle {
+  font-family: var(--font-base), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+}
+
+.canvasChartListItemStatus {
+  color: var(--color-red);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+}
+
+/* ---- DataCenterDemandChart (data-v-bfa52a43) ---- */
+
+.demandChartHead {
+  color: var(--color-silver);
+  column-gap: 0.6rem;
+  display: flex;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  justify-content: space-between;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+}
+
+.chartYellow .demandChartHead {
+  color: var(--color-black);
+}
+
+.demandChartTitle {
+  /* Inherits from demandChartHead */
+}
+
+.demandChartWrapper {
+  aspect-ratio: 280 / 55;
+  margin-top: 4.8vw;
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+}
+
+@media only screen and (min-width: 834px) {
+  .demandChartWrapper {
+    margin-top: 1.25vw;
+  }
+}
+
+/* ---- PeakDemandChart (data-v-f1961ac4) ---- */
+
+.peakChartHead {
+  column-gap: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.peakChartWrapper {
+  aspect-ratio: 282 / 114;
+  margin-top: 4.8vw;
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+}
+
+@media only screen and (min-width: 834px) {
+  .peakChartWrapper {
+    margin-top: 1.25vw;
+  }
+}
+
+.peakLabelWrapper {
+  align-items: center;
+  column-gap: 0.5rem;
+  display: flex;
+  position: absolute;
+  right: 7.0666666667vw;
+  top: 2.6666666667vw;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 834px) {
+  .peakLabelWrapper {
+    right: 1.8402777778vw;
+    top: 0.6944444444vw;
+  }
+}
+
+.peakLabel {
+  color: var(--color-silver);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease 0.11s, visibility 0.15s ease 0.11s;
+}
+
+.chartYellow .peakLabel {
+  color: var(--color-black);
+}
+
+.peakLabelLine {
+  border-top: 1px dashed var(--color-silver);
+  display: block;
+  height: 1px;
+  position: relative;
+  top: 0.3rem;
+  transform: scaleX(0);
+  transform-origin: center center;
+  width: 18.6666666667vw;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media only screen and (min-width: 834px) {
+  .peakLabelLine {
+    width: 4.8611111111vw;
+  }
+}
+
+.peakTimeLabels {
+  color: var(--color-silver);
+  display: flex;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  justify-content: space-between;
+  letter-spacing: -0.04em;
+  line-height: 1.67;
+  margin-top: 4.8vw;
+  width: 100%;
+}
+
+@media only screen and (min-width: 834px) {
+  .peakTimeLabels {
+    margin-top: 1.25vw;
+  }
+}

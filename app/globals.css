@@ -1,26 +1,202 @@
-@import "tailwindcss";
+/* ============================================
+   Microtex International - Global Styles
+   ============================================ */
 
+/* CSS Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-black: #000;
+  --color-black20: rgba(0, 0, 0, 0.2);
+  --color-black40: rgba(0, 0, 0, 0.4);
+  --color-yellow: #be2428;
+  --color-yellow-secondary: #991b1e;
+  --color-red: #be2428;
+  --color-charcoal: #e7e5e4;
+  --color-arsenic: #d6d3d1;
+  --color-mid-grey: #78716c;
+  --color-dark-grey: #f5f5f4;
+  --color-silver: #a8a29e;
+  --color-light-grey: #e7e5e4;
+  --color-off-white: #292524;
+  --color-off-white20: rgba(255, 255, 255, 0.6);
+  --color-off-white40: rgba(255, 255, 255, 0.8);
+
+  --ease-expo-in-out: cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-expo-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --font-base: "Univers Next Pro";
+  --font-accent: "ABC Monument Grotesk Mono";
+
+  --grid-column-count: 2;
+  --grid-gutter: 1.6vw;
+  --grid-outer-gutter: 4.2666666667vw;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@media only screen and (min-width: 834px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --grid-column-count: 24;
+    --grid-gutter: 1.1111111111vw;
+    --grid-outer-gutter: 2.5vw;
   }
 }
 
+/* Font Faces */
+@font-face {
+  font-display: swap;
+  font-family: "Univers Next Pro";
+  font-style: normal;
+  font-weight: 100;
+  src: url("/fonts/UniversNextPro-Thin.woff2") format("woff2"),
+    url("/fonts/UniversNextPro-Thin.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Univers Next Pro";
+  font-style: normal;
+  font-weight: 250;
+  src: url("/fonts/UniversNextPro-UltLt.woff2") format("woff2"),
+    url("/fonts/UniversNextPro-UltLt.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Univers Next Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/UniversNextPro-Light.woff2") format("woff2"),
+    url("/fonts/UniversNextPro-Light.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Univers Next Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/UniversNextPro-Regular.woff2") format("woff2"),
+    url("/fonts/UniversNextPro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ABC Monument Grotesk Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff2") format("woff2"),
+    url("/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/BebasNeue-Regular.woff2") format("woff2"),
+    url("/fonts/BebasNeue-Regular.ttf") format("truetype");
+}
+
+/* Global Resets */
+*,
+:after,
+:before {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  font-family: var(--font-base), sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+html {
+  overscroll-behavior: none;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fafaf9;
+  color: #292524;
+}
+
+button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+}
+
+a,
+button {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-size: unset;
+  font-weight: unset;
+  margin: 0;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+main {
+  position: relative;
+}
+
+img,
+svg {
+  display: block;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+a:focus,
+button:focus {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px dashed var(--color-yellow);
+  outline-offset: 3px;
+}
+
+/* Grid Container Utility */
+.grid-container {
+  column-gap: var(--grid-gutter);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), 1fr);
+  padding: 0 var(--grid-outer-gutter);
 }

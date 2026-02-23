@@ -1,0 +1,16 @@
+.blocks {
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  padding: 32vw 0 16vw;
+  position: relative;
+  row-gap: 32vw;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 834px) {
+  .blocks {
+    padding: 8.3333333333vw 0;
+    row-gap: 13.8888888889vw;
+  }
+}
