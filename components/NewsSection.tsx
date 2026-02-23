@@ -45,7 +45,7 @@ export default function NewsSection() {
             <article className={styles.postCard}>
               <div className={styles.postImageWrapper}>
                 <img
-                  src="https://a.storyblok.com/f/288034353253643/1480x828/55b44bd5c3/on.avif/m/1168x654/filters:format(jpeg):quality(70)"
+                  src="https://images.unsplash.com/photo-1701328778019-e95dedbf5346?w=1200&q=80&auto=format&fit=crop"
                   alt="Microtex Launches Next-Generation Wrapper Machine"
                 />
               </div>
@@ -74,7 +74,7 @@ export default function NewsSection() {
             <article className={styles.postCard}>
               <div className={styles.postImageWrapper}>
                 <img
-                  src="https://a.storyblok.com/f/288034353253643/666x392/679d489e35/articlenovember.avif/m/1168x688/filters:format(jpeg):quality(70)"
+                  src="https://images.unsplash.com/photo-1740914994657-f1cdffdc418e?w=1200&q=80&auto=format&fit=crop"
                   alt="Microtex Expands SAIF Zone Manufacturing Facility"
                 />
               </div>
@@ -120,7 +120,7 @@ export default function NewsSection() {
             </div>
             <div className={styles.rowImageWrapper}>
               <img
-                src="https://a.storyblok.com/f/288034353253643/1480x914/7d9f9798b5/article.avif/m/366x226/filters:format(jpeg):quality(70)"
+                src="https://images.unsplash.com/photo-1727373203579-7b8984cb8120?w=1200&q=80&auto=format&fit=crop"
                 alt="Microtex Partnership"
               />
             </div>
@@ -143,7 +143,7 @@ export default function NewsSection() {
             </div>
             <div className={styles.rowImageWrapper}>
               <img
-                src="https://a.storyblok.com/f/288034353253643/742x378/82350889c0/on.avif/m/366x186/filters:format(jpeg):quality(70)"
+                src="https://images.unsplash.com/photo-1752614671052-92e18f534db1?w=1200&q=80&auto=format&fit=crop"
                 alt="High Speed Boxer launch"
               />
             </div>

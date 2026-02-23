@@ -26,7 +26,7 @@ export const newsPosts: NewsPost[] = [
     category: "Product Updates",
     date: "February 18, 2026",
     image:
-      "/655c6cfb4f7d36ff71747561/659eaca3da965823e60d5922_DSC07766.webp",
+      "https://images.unsplash.com/photo-1701328778019-e95dedbf5346?w=1200&q=80&auto=format&fit=crop",
     featured: true,
   },
   {
@@ -38,7 +38,7 @@ export const newsPosts: NewsPost[] = [
     category: "Company News",
     date: "February 4, 2026",
     image:
-      "/655c6cfb4f7d36ff71747561/659eaca64500c645e45294b0_DSC07788.webp",
+      "https://images.unsplash.com/photo-1740914994657-f1cdffdc418e?w=1200&q=80&auto=format&fit=crop",
     featured: true,
   },
   {
@@ -50,7 +50,7 @@ export const newsPosts: NewsPost[] = [
     category: "Company News",
     date: "January 22, 2026",
     image:
-      "/655c6cfb4f7d36ff71747561/659eaca89806897908548525_DSC07868.webp",
+      "https://images.unsplash.com/photo-1738162837408-5fbf53f0b97a?w=1200&q=80&auto=format&fit=crop",
   },
   {
     slug: "high-speed-boxer-breaks-throughput-record",
@@ -61,7 +61,7 @@ export const newsPosts: NewsPost[] = [
     category: "Product Updates",
     date: "January 10, 2026",
     image:
-      "/655c6cfb4f7d36ff71747561/659eaca8ec2c66996e0625b7_DSC07836.webp",
+      "https://images.unsplash.com/photo-1727373203579-7b8984cb8120?w=1200&q=80&auto=format&fit=crop",
   },
   {
     slug: "tobacco-packaging-automation-trends-2026",
@@ -72,7 +72,7 @@ export const newsPosts: NewsPost[] = [
     category: "Industry",
     date: "December 18, 2025",
     image:
-      "/655c6cfb4f7d36ff71747561/6566fac5cf5b210648cf8538_CNC.webp",
+      "https://images.unsplash.com/photo-1626964129686-38d9a25edf84?w=1200&q=80&auto=format&fit=crop",
   },
   {
     slug: "microtex-case-packer-launch",
@@ -83,7 +83,7 @@ export const newsPosts: NewsPost[] = [
     category: "Product Updates",
     date: "November 29, 2025",
     image:
-      "/655c6cfb4f7d36ff71747561/659eaca6810798ec8dc87258_DSC07817.webp",
+      "https://images.unsplash.com/photo-1752614671052-92e18f534db1?w=1200&q=80&auto=format&fit=crop",
   },
   {
     slug: "microtex-interpack-2025-recap",
@@ -94,7 +94,7 @@ export const newsPosts: NewsPost[] = [
     category: "Events",
     date: "November 12, 2025",
     image:
-      "/655c6cfb4f7d36ff71747561/66669d6ee6fd9aa78a93b64b_6566faddf9828bc729647f72_Wire EDM-p-1080.webp",
+      "https://images.unsplash.com/photo-1693031630157-7ecc8d06de63?w=1200&q=80&auto=format&fit=crop",
   },
   {
     slug: "garniture-suction-tape-upgrade-program",
@@ -105,7 +105,7 @@ export const newsPosts: NewsPost[] = [
     category: "Product Updates",
     date: "October 28, 2025",
     image:
-      "/655c6cfb4f7d36ff71747561/66bc6a0725ef9e3c11553fad_6566fb601a95da94409fc8a3_Trumbling-p-1080.webp",
+      "https://images.unsplash.com/photo-1577962144759-8dec6b55c952?w=1200&q=80&auto=format&fit=crop",
   },
 ];
 
@@ -114,7 +114,7 @@ export const socialPosts: SocialPost[] = [
     author: "Ahmad Khan",
     jobTitle: "CEO & Founder, Microtex Industries",
     avatar:
-      "/655c6cfb4f7d36ff71747561/6567357c24397f5643366c3c_A1070537 2.webp",
+      "https://images.unsplash.com/photo-1557947149-1a821f4188c0?w=400&q=80&auto=format&fit=crop",
     quote:
       "We are building some of the most reliable packaging machinery on the market \u2014 making production lines run faster, safer and more efficiently than ever before.",
     url: "#",
@@ -123,7 +123,7 @@ export const socialPosts: SocialPost[] = [
     author: "Technical Team",
     jobTitle: "Microtex Engineering",
     avatar:
-      "/655c6cfb4f7d36ff71747561/6565ef2c9804589b1077d281_Join Us-p-500.webp",
+      "https://images.unsplash.com/photo-1649779117064-107e63b88758?w=400&q=80&auto=format&fit=crop",
     quote:
       "Every spare part we manufacture goes through rigorous quality testing. Our customers depend on zero-compromise precision, and that is exactly what we deliver.",
     url: "#",
